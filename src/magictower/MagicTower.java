@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class MagicTower extends JFrame{
@@ -13,7 +14,8 @@ public class MagicTower extends JFrame{
 	public MagicTower() {
 		Dimension scr = Toolkit.getDefaultToolkit().getScreenSize();
 		setLocation((scr.width-getWidth())/2,(scr.height - getHeight())/2);
-		setSize(217, 139);
+		setSize(200, 400);
+		setResizable(false);
 		/*setForeground(SystemColor.inactiveCaption);
 		// setAutoRequestFocus(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -40,19 +42,26 @@ public class MagicTower extends JFrame{
 		getContentPane().add(map, BorderLayout.EAST);*/
 		JPanel a = new JPanel();
 		a.setBackground(Color.cyan);
-		a.setSize(200, 200);
+		JLabel l = new JLabel();
+		l.setText("aaaa");
+		a.add(l);
+		//a.setSize(200, 200);
 		JPanel b = new JPanel();
 		b.setBackground(Color.blue);
-		b.setSize(100, 200);
+		
+		//b.setSize(100, 200);
 		getContentPane().add(b, BorderLayout.WEST);
 		getContentPane().add(a, BorderLayout.CENTER);
 		JPanel bbb = new JPanel();
 		bbb.setBackground(Color.gray);
+		JLabel l1 = new JLabel();
+		l1.setText("bbbb");
+		bbb.add(l1);
 		
 		JPanel bb = new JPanel();
 		bb.setBackground(Color.green);
 		b.add(bb, BorderLayout.SOUTH);
-		b.add(bbb, BorderLayout.CENTER);
+		b.add(bbb, BorderLayout.NORTH);
 		//getContentPane().add(a, BorderLayout.NORTH);
 		pack();
 		
